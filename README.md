@@ -14,3 +14,5 @@ require(["debugdan"], function() {
 
 Then just call it:
 dump(myObject);
+
+(README needs to be improved.)
