@@ -1,2 +1,2 @@
 # debugdan
-Util tool for javascript developers or cross-platform developers (like Apache Cordova).
+Tool util for javascript or cross-platform developers (like Apache Cordova).
