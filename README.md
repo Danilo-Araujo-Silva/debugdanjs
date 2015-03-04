@@ -1,7 +1,7 @@
 # DebugDan
 DebugDan (or debudanjs) is a tool for dump a object using javascript.
 
-The funciton **dump** looks like the function *[var_dump](http://php.net/manual/en/function.var-dump.php)* in PHP. This function provide all information enclosured in the variable informed.
+The funciton **dump** looks like the function *[var_dump](http://php.net/manual/en/function.var-dump.php)* in PHP. This function provide all information enclosed in the given variable.
 
 #Instalation
 ##Including in head
@@ -17,11 +17,11 @@ The funciton **dump** looks like the function *[var_dump](http://php.net/manual/
     });
 
 # How to use
-After debudan loads properly just call:
+After debudan fully charge, simply call:
 
     dump(yourVariableORObject);
 
-If you want not write the content of the variable at the console, but to another place, you can call
+If you don't want to write the content of the variable at the console, but to another place, you can call
 	toString(yourVariableOrObject);
 
 Debugdan have other few options too:
@@ -30,7 +30,7 @@ Debugdan have other few options too:
 
  - variable: is the variable or the object you want to inspect.
  - title: is the title to identify your variable.
- - prefix: is the prefix you want to appear in all of dump lines.
+ - prefix: is the prefix you would like to appear on all dump lines.
 
 ##Examples
 Dumping the body element:
@@ -78,9 +78,10 @@ or
 
 for default.
 
-##Improvments needed
+##Improvements needed
 
-- Create minify
-- Create a class instead of a function
-- Create unit tests
-- Create a full working example
+- Create minify;
+- Create a class instead of a function;
+- Create unit tests;
+- Create a full working example;
+- Improve english.
