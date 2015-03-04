@@ -77,3 +77,10 @@ or
     adb logcat | grep 'debugdan'
 
 for default.
+
+##Improvments needed
+
+- Create minify
+- Create a class instead of a function
+- Create unit tests
+- Create a full working example
