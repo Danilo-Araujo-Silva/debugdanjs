@@ -40,11 +40,9 @@ function toString(config) {
         );
       } else if (itemType === 'function') {
         var functionName = item.name;
-        if (!functionName) {
-          functionName = '[without name]';
+        if (functionName) {
+          out += prefix + Array(level + 1).join("  ") + '(' + itemType + ') ' + functionName + "\n";
         }
-
-        out += prefix + Array(level + 1).join("  ") + '(' + itemType + ') ' + functionName + "\n";
       } else {
         out += prefix + Array(level + 1).join("  ") + '(' + itemType+ ') ' + itemName + ": " + item + "\n";
       }
