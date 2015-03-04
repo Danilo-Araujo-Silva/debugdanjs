@@ -59,3 +59,21 @@ Output:
     debudan-prefix  (function) push
     debudan-prefix  (function) sort
     debudan-prefix  (function) splice
+
+##Logcat
+You can use debugdanjs with logcat.
+First you can log all output of your application with the command below:
+
+    adb logcat | grep `adb shell ps | grep com.domain.applicationname | cut -c10-15`
+
+Where **com.domain.applicationname** needs to be replaced.
+
+And you can log only the output of debugdanjs too, with:
+
+    adb logcat | grep 'your-prefix'
+
+or
+
+    adb logcat | grep 'debugdan'
+
+for default.
