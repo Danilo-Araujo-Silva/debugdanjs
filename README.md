@@ -1,18 +1,61 @@
-# debugdan
-Tool util for javascript or cross-platform developers (like Apache Cordova).
+# DebugDan
+DebugDan (or debudanjs) is a tool for dump a object using javascript.
+
+The funciton **dump** looks like the function *[var_dump](http://php.net/manual/en/function.var-dump.php)* in PHP. This function provide all information enclosured in the variable informed.
+
+#Instalation
+##Including in head
+    <script src="debugdan.js"></script>
+    
+   or
+   
+    <script type="text/javascript" src="debudan.js"></script>
+
+##Using [requirejs](http://requirejs.org/)
+    require(["debugdan"], function() {
+      console.log("debugdan loaded.");
+    });
 
 # How to use
-Put debugdan on head:
-<script src="debugdan.js"></script>
-or
-<script type="text/javascript" src="debugdan.js"></script>
+After debudan loads properly just call:
 
-Or require debudan with requirejs:
-require(["debugdan"], function() {
-  console.log("debugdan loaded.");
-});
+    dump(yourVariableORObject);
 
-Then just call it:
-dump(myObject);
+If you want not write the content of the variable at the console, but to another place, you can call
+	toString(yourVariableOrObject);
 
-(README needs to be improved.)
+Debugdan have other few options too:
+
+    dump(variable, title, prefix);
+
+ - variable: is the variable or the object you want to inspect.
+ - title: is the title to identify your variable.
+ - prefix: is the prefix you want to appear in all of dump lines.
+
+##Examples
+Dumping the body element:
+
+Input:
+
+    dump(jQuery('body'), 'BODY', 'debudan-prefix');
+
+Output:
+
+    debudan-prefix(object) BODY:
+    debudan-prefix  (element) 0: [object HTMLBodyElement]
+    debudan-prefix  (number) length: 1
+    debudan-prefix  (object) prevObject:
+    debudan-prefix    (document) 0: [object HTMLDocument]
+    debudan-prefix    (document) context: [object HTMLDocument]
+    debudan-prefix    (number) length: 1
+    debudan-prefix    (string) jquery: 2.1.3
+    debudan-prefix    (string) selector: 
+    debudan-prefix    (function) push
+    debudan-prefix    (function) sort
+    debudan-prefix    (function) splice
+    debudan-prefix  (document) context: [object HTMLDocument]
+    debudan-prefix  (string) selector: body
+    debudan-prefix  (string) jquery: 2.1.3
+    debudan-prefix  (function) push
+    debudan-prefix  (function) sort
+    debudan-prefix  (function) splice
